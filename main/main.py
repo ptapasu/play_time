@@ -7,7 +7,7 @@ import configparser
 from pygame import mixer
 import zc.lockfile
 import logging
-logging.basicConfig(filename='./app.log', filemode='a', format='%(asctime)s - %(levelname)s - %(message)s', datefmt='%H:%M:%S', level=logging.ERROR)
+logging.basicConfig(filename='./app.log', filemode='a', format='%(asctime)s - %(levelname)s - %(message)s', datefmt='%H:%M:%S', level=logging.DEBUG)
 #info... whats happening... debug... check for bad stuff (use with variables?) error... exceptioins.
 
 
@@ -21,7 +21,8 @@ except zc.lockfile.LockError:
 def get_block_list():
     """Reads the black (Blacklist) file, strips the whitespace and newline, appends to list,
         then joins list as 'a|b|c' for the taskkill program"""
-    file = './data/black'
+    logging.debug('Getting the blocked app list')
+    file = './black'
     block = []
     try:
         read_file = open(file,'r')
@@ -42,8 +43,8 @@ def get_app (pid):
             return (i.split()[0])
         
 def app_killer():
-    """Using terms from the black file, identifies programs it needs to kill, and terminates them"""
-    logging.debug('Running the taskkiller')
+    """Using the list from the black file, identifies programs it needs to kill, and terminates them"""
+    logging.debug('Running the appkiller')
     kill_list = []
     tasklist=os.popen('tasklist').readlines()
     targets = get_block_list()
@@ -67,20 +68,19 @@ def app_killer():
         
 def read_data(x):
     """return the date, time and state of the data file"""
+    logging.debug('Running the read_data function')
     config = configparser.ConfigParser()
     config.sections()
     try:
-        config.read('./data/config')
+        config.read('./config')
         logging.info(f'Trying to read the value {x} from the config file')
         return(config['DATA'][x])
     except KeyError:
         logging.error('The config file or an entry in it cannot be found')
 
 
-
-
-
 def play_audio(x):
+    logging.debug('Running the play_audio function')
     try:
         mixer.init()
         mixer.music.load(x)
@@ -108,6 +108,8 @@ def audio_warning(t):
         play_audio('./audio/15m.mp3')
     elif t == 5:
         play_audio('./audio/5m.mp3')
+    elif t == 1:
+        play_audio('./audio/finished.mp3')
             
 def cutoff_warning(t):
     if t == 60:
@@ -118,9 +120,12 @@ def cutoff_warning(t):
         play_audio('./audio/30cutoff.mp3')
     elif t == 15:
         play_audio('./audio/15cutoff.mp3')
+    elif t == 1:
+        play_audio('./audio/finished.mp3')
         
 def alter_data(key,value):
-    files = ['./data/config','./data/info']
+    logging.debug('Writing to the config and info files')
+    files = ['./config']
     for path in files:
         config =  configparser.ConfigParser()
         config.read(path)
@@ -131,39 +136,52 @@ def alter_data(key,value):
 
 def erase():
     """Deletes the data in the queue file"""
-    file = './data/queue'
+    logging.debug('Erasing the data in the queue file')
+    file = './queue'
     open(file, 'w')
-    alter_data('QUEUE_TIME',str(os.path.getmtime('./data/queue')))
-    b.queue_time = str(os.path.getmtime('./data/queue'))
+    alter_data('QUEUE_TIME',str(os.path.getmtime('./queue')))
+    b.queue_time = str(os.path.getmtime('./queue'))
+
+def reset_log():
+    """Deletes the data in the queue file"""
+    logging.debug('Erasing the data in the log file')
+    file = './app.log'
+    open(file, 'w')
     
 def q_switch(n):
     if n[0]=='1':
+        logging.debug('Setting the state to on')
         alter_data('state','ON')
         b.state = 'ON'
     elif n[0]=='2':
+        logging.debug('Setting the state to off')
         alter_data('state','OFF')
         b.state = 'OFF'
     elif n[0]=='3':
+        logging.debug(f'Increasing the playtime')
         add = int(n.split('=')[1])
         new_time = str(int(b.play_time)+add)
         alter_data('play_time',new_time)
         b.play_time = new_time
     elif n[0]=='4':
+        logging.debug('Changing the end time')
         time = n.split('=')[1]
         alter_data('end_time',time)
         b.end_time = time
     elif n[0]=='5':
+        logging.debug('Setting the state to on')
         alter_data('date',str(datetime.date.today()))
         b.date = str(datetime.date.today())
-        alter_data('play_time','240')
-        b.play_time = '240'
+        alter_data('play_time','120')
+        b.play_time = '120'
         alter_data('state','OFF')
         b.state = 'OFF'
-        alter_data('end_time','20:30')
-        b.end_time = '20:30'
+        alter_data('end_time','23:00')
+        b.end_time = '23:00'
             
 def queue_reader():
-    file = './data/queue'
+    logging.debug(f'Reading the queue file')
+    file = './queue'
     read_file = open(file,'r')
     file_data = read_file.readlines()
     for i in file_data:
@@ -173,11 +191,11 @@ def queue_reader():
     erase()
             
 def check_queue(saved_timestamp):
-    """Checks to see if """
-    file_timestamp = str(os.path.getmtime('./data/queue'))
+    """Checks to see if the queuefile has changed"""
+    file_timestamp = str(os.path.getmtime('./queue'))
     logging.info(f'The saved timestamp is {saved_timestamp} and the files time stamp is {file_timestamp}')
     if file_timestamp != saved_timestamp:
-        logging.info('A difference in the timestamps was found!')
+        logging.debug('A difference in the timestamps was found!')
         queue_reader()
     else:
         return
@@ -197,15 +215,12 @@ class monitor:
         if self.date == str(datetime.date.today()):
             self.play_time = int(read_data('play_time'))
         else:
-            self.play_time = 0
+            self.play_time = '0'
         self.state = 'OFF'
-        #self.state = 'OFF' #should also set time to off
         self.startup_time = read_data('start_time')
         self.end_time = read_data('end_time')
         self.queue_time = read_data('queue_time')
         self.on_counter = 0
-        #wipe the log... on startup
-        #don't need to update unless a) queue file change or b) startup
         
     def activate(self):
         logging.debug('Turning the state to "ON"')
@@ -220,13 +235,13 @@ class monitor:
         difference_hour = ((int(self.end_time[0:2]))-int(time.ctime()[11:13]))*60
         difference_min = ((int(self.end_time[3:5]))-int(time.ctime()[14:16]))
         countdown = difference_hour + difference_min
-        logging.info(f'The amount of minutes untill the cut-off (end_time) is {countdown}')
-        if countdown in [15,30,45,60]:
+        logging.debug(f'The amount of minutes untill the cut-off (end_time) is {countdown}')
+        if countdown in [1,15,30,45,60]:
             logging.debug(f'Issuing a warning about the approaching end time: {self.end_time} which is {countdown} minutes away')
             coutoff_warning(countdown)
 
     def mins_play_time(self):
-        if self.play_time in ['180','150','120','90','60','45','30','15','5']:
+        if self.play_time in ['180','150','120','90','60','45','30','15','5','1']:
             logging.debug(f'Playing warning as a milestone has been reached when counting down playtime: {self.play_time}')
             audio_warning(int(self.play_time))
             
@@ -247,30 +262,26 @@ class monitor:
         logging.debug('State is off')
         app_killer()
 
-
-        
     def get_state(self):
         check_queue(self.queue_time)
         if self.state=='ON':
-            if self.date==str(datetime.date.today()):
-                logging.info("The config file and today's date match")
-                if check_time(self.startup_time, self.end_time):
-                    logging.info(f'The time is between the startup time {self.startup_time} and end time {self.end_time}')
-                    if int(self.play_time)>0:
-                        logging.info(f'The play time is {self.play_time} which is larger than 0')
-                        self.on()
+            if check_time(self.startup_time, self.end_time):
+                logging.debug(f'The time is between the startup time {self.startup_time} and end time {self.end_time}')
+                if int(self.play_time)>0:
+                    logging.debug(f'The play time is {self.play_time} which is larger than 0')
+                    self.on()
         else:
             self.off()
-
         
 b = monitor()
 
 def main_loop():
-    q_switch('2')
-    while True: #always on
+    reset_log()#erase log file
+    q_switch('2')#initialize off
+    while True:
         b.get_state()
-        time.sleep(9)
-        logging.info('An iteration of the main loop is running')
+        time.sleep(10)
+        logging.debug('Main loop interation')
     
 if __name__=="__main__":
     main_loop()

@@ -1,0 +1,233 @@
+18:57:58 - DEBUG - Setting the state to off
+18:57:58 - DEBUG - Writing to the config and info files
+18:57:58 - DEBUG - Writing state OFF to ./config
+18:57:58 - INFO - The saved timestamp is 1549086714.5189722 and the files time stamp is 1549087028.644563
+18:57:58 - DEBUG - A difference in the timestamps was found!
+18:57:58 - DEBUG - Reading the queue file
+18:57:58 - DEBUG - Increasing the playtime
+18:57:58 - DEBUG - Writing to the config and info files
+18:57:58 - DEBUG - Writing play_time 90 to ./config
+18:57:58 - DEBUG - Setting the state to on
+18:57:58 - DEBUG - Writing to the config and info files
+18:57:58 - DEBUG - Writing date 2019-02-02 to ./config
+18:57:58 - DEBUG - Writing to the config and info files
+18:57:58 - DEBUG - Writing play_time 120 to ./config
+18:57:58 - DEBUG - Writing to the config and info files
+18:57:58 - DEBUG - Writing state OFF to ./config
+18:57:58 - DEBUG - Writing to the config and info files
+18:57:58 - DEBUG - Writing end_time 23:00 to ./config
+18:57:58 - DEBUG - Erasing the data in the queue file
+18:57:58 - DEBUG - Writing to the config and info files
+18:57:58 - DEBUG - Writing QUEUE_TIME 1549087078.5868397 to ./config
+18:57:58 - DEBUG - State is off
+18:57:58 - DEBUG - Running the appkiller
+18:57:58 - DEBUG - Getting the blocked app list
+18:57:58 - DEBUG - Searching using this re search query re.compile('.{0,}(steam|blizzard|epic|minecraft|gog|galaxy|battle.net.exe|fortnite|roblox|origin|uplay)+.{0,}', re.IGNORECASE)
+18:57:58 - DEBUG - Found a match with the PID number 7848
+18:57:58 - DEBUG - Using PID 7848 to get the APP name
+18:57:58 - DEBUG - Could not kill the file OriginWebHelperService.ex with PID number 7848
+18:58:08 - DEBUG - Main loop interation
+18:58:08 - INFO - The saved timestamp is 1549087078.5868397 and the files time stamp is 1549087078.5868397
+18:58:08 - DEBUG - State is off
+18:58:08 - DEBUG - Running the appkiller
+18:58:09 - DEBUG - Getting the blocked app list
+18:58:09 - DEBUG - Searching using this re search query re.compile('.{0,}(steam|blizzard|epic|minecraft|gog|galaxy|battle.net.exe|fortnite|roblox|origin|uplay)+.{0,}', re.IGNORECASE)
+18:58:09 - DEBUG - Found a match with the PID number 7848
+18:58:09 - DEBUG - Using PID 7848 to get the APP name
+18:58:09 - DEBUG - Could not kill the file OriginWebHelperService.ex with PID number 7848
+18:58:19 - DEBUG - Main loop interation
+18:58:19 - INFO - The saved timestamp is 1549087078.5868397 and the files time stamp is 1549087078.5868397
+18:58:19 - DEBUG - State is off
+18:58:19 - DEBUG - Running the appkiller
+18:58:19 - DEBUG - Getting the blocked app list
+18:58:19 - DEBUG - Searching using this re search query re.compile('.{0,}(steam|blizzard|epic|minecraft|gog|galaxy|battle.net.exe|fortnite|roblox|origin|uplay)+.{0,}', re.IGNORECASE)
+18:58:19 - DEBUG - Found a match with the PID number 7848
+18:58:19 - DEBUG - Using PID 7848 to get the APP name
+18:58:19 - DEBUG - Could not kill the file OriginWebHelperService.ex with PID number 7848
+18:58:29 - DEBUG - Main loop interation
+18:58:29 - INFO - The saved timestamp is 1549087078.5868397 and the files time stamp is 1549087102.9397457
+18:58:29 - DEBUG - A difference in the timestamps was found!
+18:58:29 - DEBUG - Reading the queue file
+18:58:29 - DEBUG - Increasing the playtime
+18:58:29 - DEBUG - Writing to the config and info files
+18:58:29 - DEBUG - Writing play_time 210 to ./config
+18:58:29 - DEBUG - Erasing the data in the queue file
+18:58:29 - DEBUG - Writing to the config and info files
+18:58:29 - DEBUG - Writing QUEUE_TIME 1549087109.3929558 to ./config
+18:58:29 - DEBUG - State is off
+18:58:29 - DEBUG - Running the appkiller
+18:58:29 - DEBUG - Getting the blocked app list
+18:58:29 - DEBUG - Searching using this re search query re.compile('.{0,}(steam|blizzard|epic|minecraft|gog|galaxy|battle.net.exe|fortnite|roblox|origin|uplay)+.{0,}', re.IGNORECASE)
+18:58:29 - DEBUG - Found a match with the PID number 7848
+18:58:29 - DEBUG - Using PID 7848 to get the APP name
+18:58:29 - DEBUG - Could not kill the file OriginWebHelperService.ex with PID number 7848
+18:58:39 - DEBUG - Main loop interation
+18:58:39 - INFO - The saved timestamp is 1549087109.3929558 and the files time stamp is 1549087109.3929558
+18:58:39 - DEBUG - State is off
+18:58:39 - DEBUG - Running the appkiller
+18:58:39 - DEBUG - Getting the blocked app list
+18:58:39 - DEBUG - Searching using this re search query re.compile('.{0,}(steam|blizzard|epic|minecraft|gog|galaxy|battle.net.exe|fortnite|roblox|origin|uplay)+.{0,}', re.IGNORECASE)
+18:58:39 - DEBUG - Found a match with the PID number 7848
+18:58:39 - DEBUG - Using PID 7848 to get the APP name
+18:58:39 - DEBUG - Could not kill the file OriginWebHelperService.ex with PID number 7848
+18:58:49 - DEBUG - Main loop interation
+18:58:49 - INFO - The saved timestamp is 1549087109.3929558 and the files time stamp is 1549087126.7771852
+18:58:49 - DEBUG - A difference in the timestamps was found!
+18:58:49 - DEBUG - Reading the queue file
+18:58:49 - DEBUG - Setting the state to on
+18:58:49 - DEBUG - Writing to the config and info files
+18:58:49 - DEBUG - Writing state ON to ./config
+18:58:49 - DEBUG - Erasing the data in the queue file
+18:58:49 - DEBUG - Writing to the config and info files
+18:58:49 - DEBUG - Writing QUEUE_TIME 1549087129.9435685 to ./config
+18:58:49 - DEBUG - The time is between the startup time 10:00 and end time 23:00
+18:58:49 - DEBUG - The play time is 210 which is larger than 0
+18:58:49 - DEBUG - State is on
+18:58:49 - DEBUG - The current count is 1
+18:58:59 - DEBUG - Main loop interation
+18:58:59 - INFO - The saved timestamp is 1549087129.9435685 and the files time stamp is 1549087129.9435685
+18:58:59 - DEBUG - The time is between the startup time 10:00 and end time 23:00
+18:58:59 - DEBUG - The play time is 210 which is larger than 0
+18:58:59 - DEBUG - State is on
+18:58:59 - DEBUG - The current count is 2
+18:59:09 - DEBUG - Main loop interation
+18:59:09 - INFO - The saved timestamp is 1549087129.9435685 and the files time stamp is 1549087149.0185132
+18:59:09 - DEBUG - A difference in the timestamps was found!
+18:59:09 - DEBUG - Reading the queue file
+18:59:09 - DEBUG - Setting the state to on
+18:59:09 - DEBUG - Writing to the config and info files
+18:59:09 - DEBUG - Writing state ON to ./config
+18:59:09 - DEBUG - Erasing the data in the queue file
+18:59:09 - DEBUG - Writing to the config and info files
+18:59:09 - DEBUG - Writing QUEUE_TIME 1549087149.949929 to ./config
+18:59:09 - DEBUG - The time is between the startup time 10:00 and end time 23:00
+18:59:09 - DEBUG - The play time is 210 which is larger than 0
+18:59:09 - DEBUG - State is on
+18:59:09 - DEBUG - The current count is 3
+18:59:19 - DEBUG - Main loop interation
+18:59:19 - INFO - The saved timestamp is 1549087149.949929 and the files time stamp is 1549087149.949929
+18:59:19 - DEBUG - The time is between the startup time 10:00 and end time 23:00
+18:59:19 - DEBUG - The play time is 210 which is larger than 0
+18:59:19 - DEBUG - State is on
+18:59:19 - DEBUG - The current count is 4
+18:59:29 - DEBUG - Main loop interation
+18:59:29 - INFO - The saved timestamp is 1549087149.949929 and the files time stamp is 1549087149.949929
+18:59:29 - DEBUG - The time is between the startup time 10:00 and end time 23:00
+18:59:29 - DEBUG - The play time is 210 which is larger than 0
+18:59:29 - DEBUG - State is on
+18:59:29 - DEBUG - The current count is 5
+18:59:39 - DEBUG - Main loop interation
+18:59:39 - INFO - The saved timestamp is 1549087149.949929 and the files time stamp is 1549087171.9624345
+18:59:39 - DEBUG - A difference in the timestamps was found!
+18:59:39 - DEBUG - Reading the queue file
+18:59:39 - DEBUG - Setting the state to off
+18:59:39 - DEBUG - Writing to the config and info files
+18:59:39 - DEBUG - Writing state OFF to ./config
+18:59:39 - DEBUG - Erasing the data in the queue file
+18:59:39 - DEBUG - Writing to the config and info files
+18:59:39 - DEBUG - Writing QUEUE_TIME 1549087179.9570687 to ./config
+18:59:39 - DEBUG - State is off
+18:59:39 - DEBUG - Running the appkiller
+18:59:40 - DEBUG - Getting the blocked app list
+18:59:40 - DEBUG - Searching using this re search query re.compile('.{0,}(steam|blizzard|epic|minecraft|gog|galaxy|battle.net.exe|fortnite|roblox|origin|uplay)+.{0,}', re.IGNORECASE)
+18:59:40 - DEBUG - Found a match with the PID number 7848
+18:59:40 - DEBUG - Using PID 7848 to get the APP name
+18:59:40 - DEBUG - Could not kill the file OriginWebHelperService.ex with PID number 7848
+18:59:50 - DEBUG - Main loop interation
+18:59:50 - INFO - The saved timestamp is 1549087179.9570687 and the files time stamp is 1549087179.9570687
+18:59:50 - DEBUG - State is off
+18:59:50 - DEBUG - Running the appkiller
+18:59:50 - DEBUG - Getting the blocked app list
+18:59:50 - DEBUG - Searching using this re search query re.compile('.{0,}(steam|blizzard|epic|minecraft|gog|galaxy|battle.net.exe|fortnite|roblox|origin|uplay)+.{0,}', re.IGNORECASE)
+18:59:50 - DEBUG - Found a match with the PID number 7848
+18:59:50 - DEBUG - Using PID 7848 to get the APP name
+18:59:50 - DEBUG - Could not kill the file OriginWebHelperService.ex with PID number 7848
+19:00:00 - DEBUG - Main loop interation
+19:00:00 - INFO - The saved timestamp is 1549087179.9570687 and the files time stamp is 1549087179.9570687
+19:00:00 - DEBUG - State is off
+19:00:00 - DEBUG - Running the appkiller
+19:00:00 - DEBUG - Getting the blocked app list
+19:00:00 - DEBUG - Searching using this re search query re.compile('.{0,}(steam|blizzard|epic|minecraft|gog|galaxy|battle.net.exe|fortnite|roblox|origin|uplay)+.{0,}', re.IGNORECASE)
+19:00:00 - DEBUG - Found a match with the PID number 7848
+19:00:00 - DEBUG - Using PID 7848 to get the APP name
+19:00:00 - DEBUG - Could not kill the file OriginWebHelperService.ex with PID number 7848
+19:00:10 - DEBUG - Main loop interation
+19:00:10 - INFO - The saved timestamp is 1549087179.9570687 and the files time stamp is 1549087179.9570687
+19:00:10 - DEBUG - State is off
+19:00:10 - DEBUG - Running the appkiller
+19:00:10 - DEBUG - Getting the blocked app list
+19:00:10 - DEBUG - Searching using this re search query re.compile('.{0,}(steam|blizzard|epic|minecraft|gog|galaxy|battle.net.exe|fortnite|roblox|origin|uplay)+.{0,}', re.IGNORECASE)
+19:00:10 - DEBUG - Found a match with the PID number 7848
+19:00:10 - DEBUG - Using PID 7848 to get the APP name
+19:00:10 - DEBUG - Could not kill the file OriginWebHelperService.ex with PID number 7848
+19:00:20 - DEBUG - Main loop interation
+19:00:20 - INFO - The saved timestamp is 1549087179.9570687 and the files time stamp is 1549087179.9570687
+19:00:20 - DEBUG - State is off
+19:00:20 - DEBUG - Running the appkiller
+19:00:21 - DEBUG - Getting the blocked app list
+19:00:21 - DEBUG - Searching using this re search query re.compile('.{0,}(steam|blizzard|epic|minecraft|gog|galaxy|battle.net.exe|fortnite|roblox|origin|uplay)+.{0,}', re.IGNORECASE)
+19:00:21 - DEBUG - Found a match with the PID number 7848
+19:00:21 - DEBUG - Using PID 7848 to get the APP name
+19:00:21 - DEBUG - Could not kill the file OriginWebHelperService.ex with PID number 7848
+19:00:31 - DEBUG - Main loop interation
+19:00:31 - INFO - The saved timestamp is 1549087179.9570687 and the files time stamp is 1549087179.9570687
+19:00:31 - DEBUG - State is off
+19:00:31 - DEBUG - Running the appkiller
+19:00:31 - DEBUG - Getting the blocked app list
+19:00:31 - DEBUG - Searching using this re search query re.compile('.{0,}(steam|blizzard|epic|minecraft|gog|galaxy|battle.net.exe|fortnite|roblox|origin|uplay)+.{0,}', re.IGNORECASE)
+19:00:31 - DEBUG - Found a match with the PID number 7848
+19:00:31 - DEBUG - Using PID 7848 to get the APP name
+19:00:31 - DEBUG - Could not kill the file OriginWebHelperService.ex with PID number 7848
+19:00:41 - DEBUG - Main loop interation
+19:00:41 - INFO - The saved timestamp is 1549087179.9570687 and the files time stamp is 1549087179.9570687
+19:00:41 - DEBUG - State is off
+19:00:41 - DEBUG - Running the appkiller
+19:00:41 - DEBUG - Getting the blocked app list
+19:00:41 - DEBUG - Searching using this re search query re.compile('.{0,}(steam|blizzard|epic|minecraft|gog|galaxy|battle.net.exe|fortnite|roblox|origin|uplay)+.{0,}', re.IGNORECASE)
+19:00:41 - DEBUG - Found a match with the PID number 7848
+19:00:41 - DEBUG - Using PID 7848 to get the APP name
+19:00:41 - DEBUG - Could not kill the file OriginWebHelperService.ex with PID number 7848
+19:00:51 - DEBUG - Main loop interation
+19:00:51 - INFO - The saved timestamp is 1549087179.9570687 and the files time stamp is 1549087179.9570687
+19:00:51 - DEBUG - State is off
+19:00:51 - DEBUG - Running the appkiller
+19:00:51 - DEBUG - Getting the blocked app list
+19:00:51 - DEBUG - Searching using this re search query re.compile('.{0,}(steam|blizzard|epic|minecraft|gog|galaxy|battle.net.exe|fortnite|roblox|origin|uplay)+.{0,}', re.IGNORECASE)
+19:00:51 - DEBUG - Found a match with the PID number 7848
+19:00:51 - DEBUG - Using PID 7848 to get the APP name
+19:00:52 - DEBUG - Could not kill the file OriginWebHelperService.ex with PID number 7848
+19:01:02 - DEBUG - Main loop interation
+19:01:02 - INFO - The saved timestamp is 1549087179.9570687 and the files time stamp is 1549087179.9570687
+19:01:02 - DEBUG - State is off
+19:01:02 - DEBUG - Running the appkiller
+19:01:02 - DEBUG - Getting the blocked app list
+19:01:02 - DEBUG - Searching using this re search query re.compile('.{0,}(steam|blizzard|epic|minecraft|gog|galaxy|battle.net.exe|fortnite|roblox|origin|uplay)+.{0,}', re.IGNORECASE)
+19:01:02 - DEBUG - Found a match with the PID number 7848
+19:01:02 - DEBUG - Using PID 7848 to get the APP name
+19:01:02 - DEBUG - Could not kill the file OriginWebHelperService.ex with PID number 7848
+19:01:12 - DEBUG - Main loop interation
+19:01:12 - INFO - The saved timestamp is 1549087179.9570687 and the files time stamp is 1549087270.1997106
+19:01:12 - DEBUG - A difference in the timestamps was found!
+19:01:12 - DEBUG - Reading the queue file
+19:01:12 - DEBUG - Increasing the playtime
+19:01:12 - DEBUG - Writing to the config and info files
+19:01:12 - DEBUG - Writing play_time 260 to ./config
+19:01:12 - DEBUG - Erasing the data in the queue file
+19:01:12 - DEBUG - Writing to the config and info files
+19:01:12 - DEBUG - Writing QUEUE_TIME 1549087272.3216245 to ./config
+19:01:12 - DEBUG - State is off
+19:01:12 - DEBUG - Running the appkiller
+19:01:12 - DEBUG - Getting the blocked app list
+19:01:12 - DEBUG - Searching using this re search query re.compile('.{0,}(steam|blizzard|epic|minecraft|gog|galaxy|battle.net.exe|fortnite|roblox|origin|uplay)+.{0,}', re.IGNORECASE)
+19:01:12 - DEBUG - Found a match with the PID number 7848
+19:01:12 - DEBUG - Using PID 7848 to get the APP name
+19:01:12 - DEBUG - Could not kill the file OriginWebHelperService.ex with PID number 7848
+19:01:22 - DEBUG - Main loop interation
+19:01:22 - INFO - The saved timestamp is 1549087272.3216245 and the files time stamp is 1549087272.3216245
+19:01:22 - DEBUG - State is off
+19:01:22 - DEBUG - Running the appkiller
+19:01:22 - DEBUG - Getting the blocked app list
+19:01:22 - DEBUG - Searching using this re search query re.compile('.{0,}(steam|blizzard|epic|minecraft|gog|galaxy|battle.net.exe|fortnite|roblox|origin|uplay)+.{0,}', re.IGNORECASE)
+19:01:22 - DEBUG - Found a match with the PID number 7848
+19:01:22 - DEBUG - Using PID 7848 to get the APP name
+19:01:22 - DEBUG - Could not kill the file OriginWebHelperService.ex with PID number 7848
