@@ -270,6 +270,10 @@ class monitor:
                 if int(self.play_time)>0:
                     logging.debug(f'The play time is {self.play_time} which is larger than 0')
                     self.on()
+                else:
+                    self.off()
+            else:
+                self.off()
         else:
             self.off()
         
